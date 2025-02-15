@@ -147,14 +147,10 @@ contract ERC20 is Pausable {
         address recoveredSigner = ecrecover(digest, v, r, s);
 
         if (recoveredSigner != _owner) {
-            console.log("recoveredSigner: ", recoveredSigner);
-            console.log("owner: ", _owner);
             revert("INVALID_SIGNER");
         }
 
         if (block.timestamp > deadline) {
-            console.log("block timestamp", block.timestamp);
-            console.log("deadline", deadline);
             revert("Not matched deadline");
         }
 
