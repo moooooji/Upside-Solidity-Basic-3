@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-
 pragma solidity ^0.8.0;
 
 import "./Pausable.sol";
@@ -49,7 +48,7 @@ contract ERC20 is Pausable {
         return _name;
     }
 
-    function sumbol() public view returns (string memory) {
+    function symbol() public view returns (string memory) {
         return _symbol;
     }
 
